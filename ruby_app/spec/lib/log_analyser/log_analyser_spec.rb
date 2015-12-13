@@ -16,14 +16,26 @@ RSpec.describe LogAnalyser::LogAnalyser do
   end
 
   context '#most_visited' do
-    it 'returns most visited pages ordered by number of visits' do
-      expect(log_analyser.most_visited(1).first.page)
+    it 'returns pages ordered by number of visits' do
+      expect(log_analyser.most_visited.first.page)
         .to eq("/help")
     end
 
     it 'returns hits per page' do
-      expect(log_analyser.most_visited(1).first.hits)
+      expect(log_analyser.most_visited.first.hits)
         .to eq(4)
+    end
+  end
+
+  context '#most_unique_page_views' do
+    it 'returns pages ordered by number of unique page views' do
+      expect(log_analyser.most_unique_page_views.first.page)
+        .to eq("/about")
+    end
+
+    it 'returns unique page views' do
+      expect(log_analyser.most_unique_page_views.first.unique_hits)
+        .to(eq(3))
     end
   end
 end
