@@ -1,7 +1,7 @@
 require 'spec_helper'
-require 'log_analyser/log_entry'
+require 'web_traffic_analyser/log_entry'
 
-RSpec.describe LogAnalyser::LogEntry do
+RSpec.describe WebTrafficAnalyser::LogEntry do
   let(:log_entry) do
     described_class.new(
       uri: "/help_page",

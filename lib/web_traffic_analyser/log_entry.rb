@@ -1,4 +1,4 @@
-module LogAnalyser
+module WebTrafficAnalyser
   class LogEntry
     def initialize(uri: uri, ip_address: ip_address)
       @uri        = uri

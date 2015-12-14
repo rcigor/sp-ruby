@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 $:.unshift "./lib"
 
-require 'log_analyser/log_analyser'
-require 'log_analyser/log_reader'
+require 'web_traffic_analyser/web_traffic_analyser'
+require 'web_traffic_analyser/log_reader'
 
 if ARGV.empty?
   puts 'Filename required'
@@ -11,8 +11,8 @@ end
 
 filename = ARGV.first
 
-reader   = LogAnalyser::LogReader.new
-analyser = LogAnalyser::LogAnalyser.new(reader.entries_from_file(filename))
+reader   = WebTrafficAnalyser::LogReader.new
+analyser = WebTrafficAnalyser::WebTrafficAnalyser.new(reader.entries_from_file(filename))
 
 puts "\nTop visited webpages"
 analyser.most_visited.each do |page_view|

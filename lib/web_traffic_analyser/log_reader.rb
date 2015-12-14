@@ -1,6 +1,6 @@
-require 'log_analyser/log_entry'
+require 'web_traffic_analyser/log_entry'
 
-module LogAnalyser
+module WebTrafficAnalyser
   class LogReader
     def entries_from_file(filename)
       File.read(filename).split(/\n+/).map do |line|

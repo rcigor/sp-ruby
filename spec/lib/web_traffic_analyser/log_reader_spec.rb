@@ -1,8 +1,8 @@
 require 'spec_helper'
-require 'log_analyser/log_reader'
+require 'web_traffic_analyser/log_reader'
 
-RSpec.describe LogAnalyser::LogReader do
-  let(:filename)   { "spec/lib/log_analyser/samples/example.log" }
+RSpec.describe WebTrafficAnalyser::LogReader do
+  let(:filename)   { "spec/lib/web_traffic_analyser/samples/example.log" }
   let(:log_reader) { described_class.new }
 
   context '#entries_from_file' do

@@ -1,7 +1,7 @@
-require 'log_analyser/log_entry'
+require 'web_traffic_analyser/log_entry'
 
-module LogAnalyser
-  class LogAnalyser
+module WebTrafficAnalyser
+  class WebTrafficAnalyser
     def initialize(entries)
       @entries = entries
     end
